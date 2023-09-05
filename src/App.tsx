@@ -1,7 +1,12 @@
-import "./App.module.scss";
+import style from "./App.module.scss";
+import Container from "./Components/Container/Container";
 
 function App() {
-  return <div>Hello World</div>;
+  return (
+    <div className={style.wrapper}>
+      <Container />
+    </div>
+  );
 }
 
 export default App;
