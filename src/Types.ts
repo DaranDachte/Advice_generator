@@ -1,6 +1,4 @@
 export type Advice = {
-  slip: {
-    id: number;
-    advice: string;
-  };
+  id: number;
+  advice: string;
 };
