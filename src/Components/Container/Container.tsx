@@ -32,23 +32,27 @@ const Container = () => {
 
   return (
     <div className={style.container}>
-      {isLoading ? (
-        <p className={style.advice}> Not so fast, please</p>
-      ) : (
-        <div className={style.card}>
-          <h3>ADVICE #{advice?.id}</h3>
-          <p className={style.advice}>"{advice?.advice}"</p>
+      <div className={style.card}>
+        {isLoading ? (
+          <>
+            <h3>ADVICE #{advice?.id}</h3>
+            <p className={style.advice}> Not so fast, please</p>
+          </>
+        ) : (
+          <>
+            <h3>ADVICE #{advice?.id}</h3>
 
-          <div className={style.design}>
-            <div className={style.left}> </div>
-            <div className={style.group}>
-              <Design />
-            </div>
-            <div className={style.right}></div>
+            <p className={style.advice}>"{advice?.advice}"</p>
+          </>
+        )}
+        <div className={style.design}>
+          <div className={style.left}> </div>
+          <div className={style.group}>
+            <Design />
           </div>
+          <div className={style.right}></div>
         </div>
-      )}
-
+      </div>
       <Button updateAdvice={updateAdvice} />
     </div>
   );
