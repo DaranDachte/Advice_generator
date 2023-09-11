@@ -3,9 +3,9 @@ import { ReactComponent as ChangeButton } from "../../assets/img/Button.svg";
 
 const Button = ({ updateAdvice }) => {
   return (
-    <button className={style.click}>
+    <div className={style.click}>
       <ChangeButton onClick={updateAdvice} />
-    </button>
+    </div>
   );
 };
 
