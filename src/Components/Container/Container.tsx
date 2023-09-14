@@ -19,6 +19,7 @@ const Container = () => {
     try {
       const data: Data = await fetcher("https://api.adviceslip.com/advice");
       setAdvice(data.slip);
+      error;
       setIsLoading(false);
     } catch (error) {
       setError("Something goes wrong!");
