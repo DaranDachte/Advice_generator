@@ -1,7 +1,11 @@
 .click {
   margin-top: -4rem;
-  top: 65%;
   border: none;
   background-color: transparent;
-  border-radius: 65%;
+  border-radius: 50%;
+  display: flex;
+}
+
+.click:hover {
+  box-shadow: 0 0 25px #53ffaa;
 }
