@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 import { useState, useEffect } from "react";
 import { fetcher } from "../../Helpers/fetcher";
 import { Advice, Data } from "../../Types";
-import { ReactComponent as Design } from "../../assets/img/Design.svg";
+import Design from "../../assets/img/Design.svg";
 
 const Container = () => {
   const [advice, setAdvice] = useState<Advice | null>(null);
@@ -26,7 +26,7 @@ const Container = () => {
     }
   };
 
-  const updateAdvice = async () => {
+  const updateAdvice: () => Promise<void> = async () => {
     getData();
   };
 
@@ -48,7 +48,7 @@ const Container = () => {
         <div className={style.design}>
           <div className={style.left}> </div>
           <div className={style.group}>
-            <Design />
+            <img src={Design} />
           </div>
           <div className={style.right}></div>
         </div>

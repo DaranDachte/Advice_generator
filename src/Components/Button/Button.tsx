@@ -1,10 +1,13 @@
 import style from "./style.module.scss";
-import { ReactComponent as ChangeButton } from "../../assets/img/Button.svg";
+import ChangeButton from "../../assets/img/Button.svg";
 
-const Button = ({ updateAdvice }) => {
+interface ButtonProps {
+  updateAdvice: () => void;
+}
+const Button: React.FC<ButtonProps> = ({ updateAdvice }) => {
   return (
     <div className={style.click}>
-      <ChangeButton onClick={updateAdvice} />
+      <img src={ChangeButton} alt="ChangeButton" onClick={updateAdvice} />
     </div>
   );
 };
